@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SecurePhoneMobile</string>
+    <string name="tab1">Inicio</string>
+    <string name="tab2">Ajustes</string>
+    <string name="tab3">Información</string>
+    <string name="LabelBtnIniciarSesion">Iniciar Sesión</string>
+    <string name="LabelBtnRegistrarse">Registrarse</string>
+    <string name="LabelBtnFacebook">Iniciar Sesión con Facebook</string>
+    <string name="LabelBtnGoogle">Iniciar Sesión con Google</string>
+    <string name="LabelBtnFacebookReg">Registrarte con Facebook</string>
+    <string name="LabelBtnGoogleReg">Registrarte con Google</string>
+    <string name="LabelCorreo">Correo:</string>
+    <string name="LabelContrasena">Contraseña:</string>
+    <string name="LabelBarBtnInicio">Inicio</string>
+    <string name="LabelBarBtnAjustes">Ajustes</string>
+    <string name="LabelBarBtnInfo">Información</string>
+    <string name="LabelDividerInicio">Tu dispositivo</string>
+    <string name="LabelDividerAjustes">Ajustes</string>
+    <string name="LabelDividerInfo">Información</string>
+</resources>

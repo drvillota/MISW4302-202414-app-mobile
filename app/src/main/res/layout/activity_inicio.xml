@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_backgorund"
+    tools:context=".InicioActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Superior"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="app logo"
+                    app:srcCompat="@drawable/logo" />
+
+                <ImageView
+                    android:id="@+id/Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/secure_phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/TabBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/BtnInicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/color_secundary_headbar"
+                    android:maxWidth="50dp"
+                    android:text="@string/LabelBarBtnInicio"
+                    android:textColor="@color/color_primary_buttons"
+                    app:cornerRadius="0dp"
+                    app:strokeColor="@color/color_other_buttons"
+                    app:strokeWidth="2dp" />
+
+                <Button
+                    android:id="@+id/BtnAjustes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/color_primary_buttons"
+                    android:maxWidth="50dp"
+                    android:text="@string/LabelBarBtnAjustes"
+                    android:textColor="@color/color_secundary_headbar"
+                    app:cornerRadius="0dp"
+                    app:strokeColor="@color/color_other_buttons"
+                    app:strokeWidth="2dp" />
+
+                <Button
+                    android:id="@+id/BtnInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/color_primary_buttons"
+                    android:maxWidth="50dp"
+                    android:text="@string/LabelBarBtnInfo"
+                    android:textColor="@color/color_secundary_headbar"
+                    app:cornerRadius="0dp"
+                    app:strokeColor="@color/color_other_buttons"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/Configuracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="false"
+                android:baselineAlignBottom="false"
+                app:srcCompat="@drawable/gear" />
+
+            <RelativeLayout
+                android:id="@+id/Separacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/LabelDivision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/color_backgorund"
+                    android:text="@string/LabelDividerInicio" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/LabelDivision"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/LabelDivision"
+                    android:background="@android:color/black"/>
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/LabelDivision"
+                    android:background="@android:color/black"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

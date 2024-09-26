@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_backgorund">#FFFFFF</color>
+    <color name="color_primary_buttons">#3F36F0</color>
+    <color name="color_secundary_buttons">#808080</color>
+    <color name="color_secundary_headbar">#ECD444</color>
+    <color name="color_info_buttons">#ED1B2E</color>
+    <color name="color_other_buttons">#000000</color>
+</resources>
