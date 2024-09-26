@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_backgorund"
     tools:context=".RegistrarActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,7 +66,8 @@
                 android:maxWidth="48dp"
                 android:minWidth="48dp"
                 android:text="@string/LabelCorreo"
-                android:textAlignment="textEnd" />
+                android:textAlignment="textEnd"
+                android:textColor="@color/color_other_buttons" />
 
             <EditText
                 android:id="@+id/CorreoField"
@@ -94,7 +96,8 @@
                 android:maxWidth="48dp"
                 android:minWidth="48dp"
                 android:text="@string/LabelContrasena"
-                android:textAlignment="textEnd" />
+                android:textAlignment="textEnd"
+                android:textColor="@color/color_other_buttons" />
 
             <EditText
                 android:id="@+id/ContrasenaField"
@@ -125,7 +128,8 @@
                 android:backgroundTint="@color/color_primary_buttons"
                 android:elevation="32dp"
                 android:onClick="cambiarPantallaInicio"
-                android:text="@string/LabelBtnRegistrarse" />
+                android:text="@string/LabelBtnRegistrarse"
+                android:textColor="@color/color_backgorund" />
 
             <Button
                 android:id="@+id/BtnIniciarSesion"
@@ -136,7 +140,8 @@
                 android:backgroundTint="@color/color_secundary_buttons"
                 android:elevation="50dp"
                 android:onClick="cambiarPantallaMain"
-                android:text="@string/LabelBtnIniciarSesion" />
+                android:text="@string/LabelBtnIniciarSesion"
+                android:textColor="@color/color_backgorund" />
 
         </LinearLayout>
 
@@ -156,6 +161,7 @@
                 android:elevation="32dp"
                 android:onClick="cambiarPantallaInicio"
                 android:text="@string/LabelBtnFacebookReg"
+                android:textColor="@color/color_backgorund"
                 app:icon="@drawable/logofacebook" />
 
             <Button
@@ -167,6 +173,7 @@
                 android:elevation="32dp"
                 android:onClick="cambiarPantallaInicio"
                 android:text="@string/LabelBtnGoogleReg"
+                android:textColor="@color/color_backgorund"
                 app:icon="@drawable/logogoogle" />
 
         </LinearLayout>

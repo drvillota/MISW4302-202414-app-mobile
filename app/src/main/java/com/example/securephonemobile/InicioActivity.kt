@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.securephonemobile.databinding.ActivityInicioBinding
+
 class InicioActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInicioBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +23,8 @@ class InicioActivity : AppCompatActivity() {
         }
     }
 
-    fun cambiarPantallaOffline(view: View){
-        val intent = Intent(this, InicioOfflineActivity::class.java)
+    fun cambiarPantallaOnline(view: View){
+        val intent = Intent(this, InicioOnlineActivity::class.java)
         startActivity(intent)
     }
 

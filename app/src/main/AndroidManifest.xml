@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SecurePhoneMobile"
         tools:targetApi="31">
         <activity
+            android:name=".InicioOnlineActivity"
+            android:exported="false" />
+        <activity
             android:name=".InfoActivity"
             android:exported="false" />
         <activity

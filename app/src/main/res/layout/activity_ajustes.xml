@@ -5,15 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_backgorund"
     tools:context=".AjustesActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Superior"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/Inferior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1"
+        tools:ignore="NotSibling">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,7 +63,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="@color/color_primary_buttons"
-                    android:maxWidth="50dp"
                     android:onClick="cambiarPantallaInicio"
                     android:text="@string/LabelBarBtnInicio"
                     android:textColor="@color/color_secundary_headbar"
@@ -74,6 +77,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/color_secundary_headbar"
                     android:maxWidth="50dp"
+                    android:onClick="cambiarPantallaAjustes"
                     android:text="@string/LabelBarBtnAjustes"
                     android:textColor="@color/color_primary_buttons"
                     app:cornerRadius="0dp"
@@ -86,7 +90,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="@color/color_primary_buttons"
-                    android:maxWidth="50dp"
                     android:onClick="cambiarPantallaInformacion"
                     android:text="@string/LabelBarBtnInfo"
                     android:textColor="@color/color_secundary_headbar"
@@ -95,30 +98,22 @@
                     app:strokeWidth="2dp" />
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/Configuracion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:id="@+id/ImgConfig"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="end"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="false"
-                android:baselineAlignBottom="false"
-                android:clickable="true"
+                android:layout_marginRight="10dp"
+                android:contentDescription="Configuración"
+                android:elevation="50dp"
                 app:srcCompat="@drawable/gear" />
 
             <RelativeLayout
                 android:id="@+id/Separacion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/LabelDivision"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="10dp"
-                    android:background="@color/color_backgorund"
-                    android:text="@string/LabelDividerInfo" />
+                android:layout_height="wrap_content"
+                android:minHeight="30dp">
 
                 <View
                     android:id="@+id/divider1"
@@ -137,9 +132,258 @@
                     android:layout_toEndOf="@+id/LabelDivision"
                     android:background="@android:color/black" />
 
+                <TextView
+                    android:id="@+id/LabelDivision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/LabelDividerAjustes"
+                    android:textColor="@color/color_other_buttons" />
             </RelativeLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Superior">
+
+        <LinearLayout
+            android:id="@+id/Inferior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UseSwitchCompatOrMaterialXml">
+
+            <TextView
+                android:id="@+id/Info1SecurePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/DescripAjustes"
+                android:textColor="@color/color_other_buttons" />
+
+            <LinearLayout
+                android:id="@+id/Opc1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/CBOpc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/LabelOpc1"
+                    android:textColor="@color/color_other_buttons" />
+
+                <ImageButton
+                    android:id="@+id/BtnOpc1"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Más información"
+                    android:elevation="50dp"
+                    app:srcCompat="@drawable/logoinfo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Opc2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/CBOpc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/LabelOpc2"
+                    android:textColor="@color/color_other_buttons" />
+
+                <ImageButton
+                    android:id="@+id/BtnOpc2"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Más información"
+                    android:elevation="50dp"
+                    app:srcCompat="@drawable/logoinfo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Opc3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/CBOpc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/LabelOpc3"
+                    android:textColor="@color/color_other_buttons" />
+
+                <ImageButton
+                    android:id="@+id/BtnOpc3"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Más información"
+                    android:elevation="50dp"
+                    app:srcCompat="@drawable/logoinfo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Opc4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/CBOpc4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/LabelOpc4"
+                    android:textColor="@color/color_other_buttons" />
+
+                <ImageButton
+                    android:id="@+id/BtnOpc4"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Más información"
+                    android:elevation="50dp"
+                    app:srcCompat="@drawable/logoinfo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Opc5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/CBOpc5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/LabelOpc5"
+                    android:textColor="@color/color_other_buttons" />
+
+                <ImageButton
+                    android:id="@+id/BtnOpc5"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Más información"
+                    android:elevation="50dp"
+                    app:srcCompat="@drawable/logoinfo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BorrarDatos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/Opc6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/CBOpc6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/LabelOpc6"
+                        android:textColor="@color/color_other_buttons" />
+
+                    <ImageButton
+                        android:id="@+id/BtnInfoOpc6"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="Más información"
+                        android:elevation="50dp"
+                        app:srcCompat="@drawable/logoinfo" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/BtnOpc6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="150dp"
+                    android:backgroundTint="@color/color_primary_buttons"
+                    android:elevation="50dp"
+                    android:text="@string/LabelBtnOpc6"
+                    android:textColor="@color/color_backgorund" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/CopiaSeguridad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/Opc7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/CBOpc7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/LabelOpc7"
+                        android:textColor="@color/color_other_buttons" />
+
+                    <ImageButton
+                        android:id="@+id/BtnInfoOpc7"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="Más información"
+                        android:elevation="50dp"
+                        app:srcCompat="@drawable/logoinfo" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/BtnOpc7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="150dp"
+                    android:backgroundTint="@color/color_primary_buttons"
+                    android:elevation="50dp"
+                    android:text="@string/LabelBtnOpc7"
+                    android:textColor="@color/color_backgorund" />
+
+            </LinearLayout>
 
         </LinearLayout>
+    </ScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

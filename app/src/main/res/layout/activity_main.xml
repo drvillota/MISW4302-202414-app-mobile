@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_backgorund"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,7 +66,9 @@
                 android:maxWidth="48dp"
                 android:minWidth="48dp"
                 android:text="@string/LabelCorreo"
-                android:textAlignment="textEnd" />
+                android:textAlignment="textEnd"
+                android:textColor="@color/color_other_buttons"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/CorreoField"
@@ -94,7 +97,9 @@
                 android:maxWidth="48dp"
                 android:minWidth="48dp"
                 android:text="@string/LabelContrasena"
-                android:textAlignment="textEnd" />
+                android:textAlignment="textEnd"
+                android:textColor="@color/color_other_buttons"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/ContrasenaField"
@@ -105,7 +110,6 @@
                 android:ems="10"
                 android:inputType="text"
                 android:text="Contraseña" />
-
         </LinearLayout>
 
         <CheckBox
@@ -116,7 +120,9 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
-            android:text="Recuerdame" />
+            android:text="Recuerdame"
+            android:textColor="@color/color_other_buttons"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/Opciones"
@@ -135,7 +141,8 @@
                 android:backgroundTint="@color/color_primary_buttons"
                 android:elevation="50dp"
                 android:onClick="cambiarPantallaInicio"
-                android:text="@string/LabelBtnIniciarSesion" />
+                android:text="@string/LabelBtnIniciarSesion"
+                android:textColor="@color/color_backgorund" />
 
             <Button
                 android:id="@+id/BtnRegistrar"
@@ -146,7 +153,8 @@
                 android:backgroundTint="@color/color_secundary_buttons"
                 android:elevation="32dp"
                 android:onClick="cambiarPantallaRegistrar"
-                android:text="@string/LabelBtnRegistrarse" />
+                android:text="@string/LabelBtnRegistrarse"
+                android:textColor="@color/color_backgorund" />
         </LinearLayout>
 
         <LinearLayout
@@ -165,6 +173,7 @@
                 android:elevation="32dp"
                 android:onClick="cambiarPantallaInicio"
                 android:text="@string/LabelBtnFacebook"
+                android:textColor="@color/color_backgorund"
                 app:icon="@drawable/logofacebook" />
 
             <Button
@@ -176,10 +185,9 @@
                 android:elevation="32dp"
                 android:onClick="cambiarPantallaInicio"
                 android:text="@string/LabelBtnGoogle"
+                android:textColor="@color/color_backgorund"
                 app:icon="@drawable/logogoogle" />
-
         </LinearLayout>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

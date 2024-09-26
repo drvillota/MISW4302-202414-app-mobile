@@ -7,13 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.securephonemobile.databinding.ActivityInicioOfflineBinding
+import com.example.securephonemobile.databinding.ActivityInicioOnlineBinding
 
-class InicioOfflineActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityInicioOfflineBinding
+class InicioOnlineActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityInicioOnlineBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityInicioOfflineBinding.inflate(layoutInflater)
+        binding = ActivityInicioOnlineBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -23,7 +23,7 @@ class InicioOfflineActivity : AppCompatActivity() {
         }
     }
 
-    fun cambiarPantallaOnline(view: View){
+    fun cambiarPantallaOffline(view: View){
         val intent = Intent(this, InicioActivity::class.java)
         startActivity(intent)
     }

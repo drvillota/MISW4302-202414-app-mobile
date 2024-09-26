@@ -15,6 +15,25 @@
     <string name="LabelBarBtnAjustes">Ajustes</string>
     <string name="LabelBarBtnInfo">Información</string>
     <string name="LabelDividerInicio">Tu dispositivo</string>
+    <string name="LabelDividerMapa">Ubiciación de tu dispositivo</string>
+    <string name="LabelDividerMapaOffline">Tu dispositivo está fuera de línea</string>
     <string name="LabelDividerAjustes">Ajustes</string>
     <string name="LabelDividerInfo">Información</string>
+    <string name="DescripAjustes">Acciones que ejecutará el dispositivo al iniciar el protocolo de robo. Activalas seleccionando la casilla.</string>
+    <string name="LabelOpc1">Detección de robo inteligente</string>
+    <string name="LabelOpc2">Alarma sonora</string>
+    <string name="LabelOpc3">Notificaciones</string>
+    <string name="LabelOpc4">Rastreo tiempo real</string>
+    <string name="LabelOpc5">Análisis de pratrones de uso</string>
+    <string name="LabelOpc6">Borrado de datos</string>
+    <string name="LabelOpc7">Copia de seguridad</string>
+    <string name="LabelBtnOpc6">Borrar datos del dispositivo</string>
+    <string name="LabelBtnOpc7">Crear copia de seguridad</string>
+
+    <string name="TituloInfo1SecurePhone">¿Qué es SecurePhone?</string>
+    <string name="Descrip1SecurePhone">SecurePhone es la app encargada de la seguridad y rastreo de tu dispositivo móvil haciendo uso del gps y los sensores de movimiento. </string>
+    <string name="TituloInfo2SecurePhone">¿Cómo funciona?</string>
+    <string name="Descrip2SecurePhone">Si tu dispositivo fue robado (lo sentimos), este alertará los sensores de movimiento los cuales darán inicio al protocolo de activación que busca la confirmación (o no) de robo mediante la interfáz de nuestra aplicación.
+Si no hay respuesta se prosigue con el protocolo de robo que se configura en la pestaña de Ajustes.</string>
+
 </resources>

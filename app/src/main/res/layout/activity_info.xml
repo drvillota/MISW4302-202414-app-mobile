@@ -5,15 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_backgorund"
     tools:context=".InfoActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Superior"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/Inferior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintVertical_weight="1"
+        tools:ignore="NotSibling">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,7 +62,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="@color/color_primary_buttons"
-                    android:maxWidth="50dp"
                     android:onClick="cambiarPantallaInicio"
                     android:text="@string/LabelBarBtnInicio"
                     android:textColor="@color/color_secundary_headbar"
@@ -73,7 +75,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="@color/color_primary_buttons"
-                    android:maxWidth="50dp"
                     android:onClick="cambiarPantallaAjustes"
                     android:text="@string/LabelBarBtnAjustes"
                     android:textColor="@color/color_secundary_headbar"
@@ -87,7 +88,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="@color/color_secundary_headbar"
-                    android:maxWidth="50dp"
                     android:text="@string/LabelBarBtnInfo"
                     android:textColor="@color/color_primary_buttons"
                     app:cornerRadius="0dp"
@@ -95,30 +95,22 @@
                     app:strokeWidth="2dp" />
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/Configuracion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:id="@+id/ImgConfig"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="end"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="false"
-                android:baselineAlignBottom="false"
-                android:clickable="true"
+                android:layout_marginRight="10dp"
+                android:contentDescription="Configuración"
+                android:elevation="50dp"
                 app:srcCompat="@drawable/gear" />
 
             <RelativeLayout
                 android:id="@+id/Separacion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/LabelDivision"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="10dp"
-                    android:background="@color/color_backgorund"
-                    android:text="@string/LabelDividerInfo" />
+                android:layout_height="wrap_content"
+                android:minHeight="30dp">
 
                 <View
                     android:id="@+id/divider1"
@@ -137,9 +129,73 @@
                     android:layout_toEndOf="@+id/LabelDivision"
                     android:background="@android:color/black" />
 
+                <TextView
+                    android:id="@+id/LabelDivision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/LabelDividerInfo"
+                    android:textColor="@color/color_other_buttons" />
             </RelativeLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Superior">
+
+        <LinearLayout
+            android:id="@+id/Inferior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UseSwitchCompatOrMaterialXml">
+
+            <TextView
+                android:id="@+id/LabelInfo1SecurePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/TituloInfo1SecurePhone"
+                android:textColor="@color/color_other_buttons"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Info1SecurePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/Descrip1SecurePhone"
+                android:textColor="@color/color_other_buttons" />
+
+            <TextView
+                android:id="@+id/LabelInfo2SecurePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/TituloInfo2SecurePhone"
+                android:textColor="@color/color_other_buttons"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Info2SecurePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/Descrip2SecurePhone"
+                android:textColor="@color/color_other_buttons" />
 
         </LinearLayout>
+    </ScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

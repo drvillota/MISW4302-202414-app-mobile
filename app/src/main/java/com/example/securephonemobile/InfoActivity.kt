@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.securephonemobile.databinding.ActivityInfoBinding
-import com.example.securephonemobile.databinding.ActivityInicioOfflineBinding
 
 class InfoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInfoBinding
