@@ -7,12 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.securephonemobile.databinding.ActivityInicioBinding
-class InicioActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityInicioBinding
+import com.example.securephonemobile.databinding.ActivityAjustesBinding
+
+class AjustesActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityAjustesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityInicioBinding.inflate(layoutInflater)
+        binding = ActivityAjustesBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -22,13 +23,8 @@ class InicioActivity : AppCompatActivity() {
         }
     }
 
-    fun cambiarPantallaOffline(view: View){
-        val intent = Intent(this, InicioOfflineActivity::class.java)
-        startActivity(intent)
-    }
-
-    fun cambiarPantallaAjustes(view: View){
-        val intent = Intent(this, AjustesActivity::class.java)
+    fun cambiarPantallaInicio(view: View){
+        val intent = Intent(this, InicioActivity::class.java)
         startActivity(intent)
     }
 

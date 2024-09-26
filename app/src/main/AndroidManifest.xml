@@ -13,6 +13,15 @@
         android:theme="@style/Theme.SecurePhoneMobile"
         tools:targetApi="31">
         <activity
+            android:name=".InfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AjustesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InicioOfflineActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegistrarActivity"
             android:exported="false" />
         <activity

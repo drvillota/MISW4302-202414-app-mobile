@@ -5,8 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_backgorund"
-    tools:context=".InicioActivity">
+    tools:context=".InicioOfflineActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Superior"
@@ -128,7 +127,7 @@
                     android:layout_alignLeft="@+id/LabelDivision"
                     android:layout_centerVertical="true"
                     android:layout_toStartOf="@+id/LabelDivision"
-                    android:background="@android:color/black"/>
+                    android:background="@android:color/black" />
 
                 <View
                     android:id="@+id/divider2"
@@ -136,12 +135,11 @@
                     android:layout_height="1dp"
                     android:layout_centerInParent="true"
                     android:layout_toEndOf="@+id/LabelDivision"
-                    android:background="@android:color/black"/>
+                    android:background="@android:color/black" />
 
             </RelativeLayout>
 
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

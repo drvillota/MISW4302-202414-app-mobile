@@ -5,8 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_backgorund"
-    tools:context=".InicioActivity">
+    tools:context=".AjustesActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Superior"
@@ -59,10 +58,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/color_secundary_headbar"
+                    android:backgroundTint="@color/color_primary_buttons"
                     android:maxWidth="50dp"
+                    android:onClick="cambiarPantallaInicio"
                     android:text="@string/LabelBarBtnInicio"
-                    android:textColor="@color/color_primary_buttons"
+                    android:textColor="@color/color_secundary_headbar"
                     app:cornerRadius="0dp"
                     app:strokeColor="@color/color_other_buttons"
                     app:strokeWidth="2dp" />
@@ -72,11 +72,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/color_primary_buttons"
+                    android:backgroundTint="@color/color_secundary_headbar"
                     android:maxWidth="50dp"
-                    android:onClick="cambiarPantallaAjustes"
                     android:text="@string/LabelBarBtnAjustes"
-                    android:textColor="@color/color_secundary_headbar"
+                    android:textColor="@color/color_primary_buttons"
                     app:cornerRadius="0dp"
                     app:strokeColor="@color/color_other_buttons"
                     app:strokeWidth="2dp" />
@@ -119,7 +118,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:background="@color/color_backgorund"
-                    android:text="@string/LabelDividerInicio" />
+                    android:text="@string/LabelDividerInfo" />
 
                 <View
                     android:id="@+id/divider1"
@@ -128,7 +127,7 @@
                     android:layout_alignLeft="@+id/LabelDivision"
                     android:layout_centerVertical="true"
                     android:layout_toStartOf="@+id/LabelDivision"
-                    android:background="@android:color/black"/>
+                    android:background="@android:color/black" />
 
                 <View
                     android:id="@+id/divider2"
@@ -136,12 +135,11 @@
                     android:layout_height="1dp"
                     android:layout_centerInParent="true"
                     android:layout_toEndOf="@+id/LabelDivision"
-                    android:background="@android:color/black"/>
+                    android:background="@android:color/black" />
 
             </RelativeLayout>
 
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
